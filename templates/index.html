@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Rock, Paper, Scissors</h1>
+    <form method="POST">
+        <button name="choice" value="rock">Rock</button>
+        <button name="choice" value="paper">Paper</button>
+        <button name="choice" value="scissors">Scissors</button>
+    </form>
+    {% if player_choice %}
+        <p>You chose {{ player_choice }}. The computer chose {{ computer_choice }}. {{ result }}</p>
+    {% endif %}
+</body>
+</html>
